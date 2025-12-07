@@ -647,7 +647,8 @@
                 phone: document.getElementById('phone').value,
                 email: document.getElementById('email').value,
                 submitted_at: new Date().toISOString()
-            };
+            const mailtoLink = `mailto:info@myfinai.co.il?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
             
             try {
                 // Send to API
